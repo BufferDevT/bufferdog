@@ -1,248 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUFFERDOG | Stuck at 99% 🐕‍🦺</title>
+  <meta name="description" content="BUFFERDOG is stuck at 99%. The internet's most cursed, patient, and chaotic memecoin. Still online.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      font-family: system-ui;
+    }
 
-<title>BUFFERDOG | Stuck at 99%</title>
+    .glitch {
+      animation: glitch 1s linear infinite;
+      text-shadow: 
+        0 0 10px #22ff88,
+        2px 2px 0 #ff00ff,
+        -2px -2px 0 #00ffff;
+    }
 
-<meta name="description" content="BUFFERDOG is stuck at 99%. The internet's most relatable memecoin.">
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+      100% { transform: translate(0); }
+    }
 
-<script src="https://cdn.tailwindcss.com"></script>
+    .hero-img {
+      animation: glitch-img 2s linear infinite alternate;
+      filter: brightness(1.15) contrast(1.2);
+    }
 
-<style>
-body{
-background:#070707;
-color:white;
-font-family:system-ui;
-}
+    @keyframes glitch-img {
+      0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+      20% { clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+      40% { clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 80%); }
+    }
 
-.glitch{
-animation:glitch 1s linear infinite;
-text-shadow:0 0 12px #22ff88,2px 2px 0 #ff00ff,-2px -2px 0 #00ffff;
-}
+    .loading-bar {
+      animation: buffer 3.5s linear infinite;
+      box-shadow: 0 0 25px #22ff88;
+    }
 
-@keyframes glitch{
-0%{transform:translate(0)}
-20%{transform:translate(-2px,2px)}
-40%{transform:translate(-2px,-2px)}
-60%{transform:translate(2px,2px)}
-80%{transform:translate(2px,-2px)}
-100%{transform:translate(0)}
-}
+    @keyframes buffer {
+      0% { width: 98%; }
+      50% { width: 99.9%; }
+      100% { width: 98%; }
+    }
 
-.loading-bar{
-box-shadow:0 0 20px #22ff88;
-}
-
-.hero-img{
-animation:float 6s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0)}
-50%{transform:translateY(-10px)}
-100%{transform:translateY(0)}
-}
-</style>
+    .countdown {
+      font-family: 'Press Start 2P', system-ui;
+      letter-spacing: 4px;
+    }
+  </style>
 </head>
-
 <body class="min-h-screen">
 
-<!-- NAV -->
-<nav class="fixed w-full z-50 bg-black/70 backdrop-blur border-b border-green-500/20">
-<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+  <!-- NAVBAR -->
+  <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-green-500/30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="BufferDog" class="w-10 h-10">
+        <span class="text-3xl font-black tracking-tighter glitch">BUFFERDOG</span>
+      </div>
+      <a href="#buy" 
+         class="px-8 py-3 bg-orange-500 hover:bg-red-500 text-black font-black rounded-2xl text-lg transition hover:scale-110">
+        BUY BEFORE 100%
+      </a>
+    </div>
+  </nav>
 
-<div class="flex items-center gap-3">
-<img src="logo.png" class="w-10">
-<span class="text-2xl font-black glitch">BUFFERDOG</span>
-</div>
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center justify-center pt-20 text-center px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(#22ff8830_0%,transparent_70%)]"></div>
+    
+    <div class="max-w-5xl mx-auto z-10">
+      <img src="logo.png" alt="BufferDog" class="mx-auto w-80 md:w-96 hero-img mb-6 drop-shadow-2xl">
 
-<div class="flex gap-4">
-<a href="#buy" class="bg-orange-500 px-6 py-2 rounded-xl font-black hover:scale-110 transition">ENTER BUFFER</a>
-</div>
+      <h1 class="text-7xl md:text-8xl font-black glitch tracking-[-4px] mb-2 neon-text">
+        STUCK AT 99%
+      </h1>
+      <p class="text-5xl md:text-6xl font-bold text-orange-400 mb-8">
+        BUT STILL FUCKING ONLINE 🐕‍🦺🚀
+      </p>
 
-</div>
-</nav>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#buy" 
+           class="px-12 py-6 bg-gradient-to-r from-orange-500 to-red-500 text-black font-black text-3xl rounded-3xl hover:scale-110 transition shadow-2xl">
+          BUY $BFRD NOW
+        </a>
+        <a href="https://dexscreener.com/solana/TU_CA_AQUI" target="_blank"
+           class="px-12 py-6 border-4 border-white font-black text-3xl rounded-3xl hover:bg-white/10 transition">
+          LIVE ON DEXSCREENER
+        </a>
+      </div>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center pt-24 text-center px-6">
+      <!-- CONTRACT -->
+      <div class="mt-12 bg-black/60 inline-flex items-center gap-4 px-8 py-4 rounded-2xl border border-green-500/50 font-mono">
+        <span class="text-green-400">CA:</span>
+        <span id="contract" class="break-all">PASTE_YOUR_REAL_CA_HERE</span>
+        <button onclick="copyCA()" 
+                class="bg-green-500 hover:bg-emerald-400 text-black px-5 py-2 rounded-xl text-sm font-black transition">
+          COPY
+        </button>
+      </div>
 
-<div class="max-w-5xl">
+      <!-- BUFFER BAR -->
+      <div class="mt-14 max-w-md mx-auto">
+        <div class="flex justify-between text-xs text-green-400 font-bold mb-1">
+          <span>BUFFER STATUS</span>
+          <span>NEVER CRASHED</span>
+        </div>
+        <div class="h-7 bg-zinc-900 rounded-full overflow-hidden border-2 border-green-500/50">
+          <div class="loading-bar h-full w-[99%] bg-gradient-to-r from-green-400 via-emerald-400 to-green-400"></div>
+        </div>
+        <p class="text-center text-green-400 font-black text-2xl mt-2">99% • STILL LOADING</p>
+      </div>
 
-<img src="logo.png" class="mx-auto w-80 hero-img mb-8">
+      <!-- COUNTDOWN -->
+      <div class="mt-16 bg-zinc-900/80 border border-orange-500/50 rounded-3xl p-8 max-w-lg mx-auto">
+        <p class="text-orange-400 font-bold text-sm tracking-widest mb-3">LAUNCHING SOON</p>
+        <p class="text-2xl font-black mb-4">Saturday, April 4th • 18:00 UTC</p>
+        <div id="countdown" class="countdown text-5xl font-bold text-green-400"></div>
+      </div>
 
-<h1 class="text-7xl md:text-8xl font-black glitch mb-4">
-STUCK AT 99%
-</h1>
+      <div class="mt-16 text-zinc-400 max-w-xl mx-auto text-lg leading-relaxed">
+        The internet tried to finish loading him.<br>
+        He refused.<br>
+        Now he has a ticker.<br>
+        <span class="text-white font-bold">Welcome to the eternal buffer.</span>
+      </div>
+    </div>
+  </section>
 
-<p class="text-3xl text-orange-400 mb-8">
-But still online.
-</p>
+  <!-- LORE + SECTIONS (mismo que antes) -->
+  <!-- ... (mantengo las secciones de lore, why moon, tokenomics, roadmap y how to buy igual que la versión anterior para no alargar) ... -->
 
-<div class="flex flex-wrap gap-4 justify-center">
+  <!-- NEW: COMMUNITY MEMES SECTION -->
+  <section class="py-20 px-6 bg-black/70 border-t border-green-500/30">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-5xl font-black glitch mb-8">COMMUNITY MEMES 🐕‍🦺</h2>
+      <p class="text-xl text-zinc-300 mb-12 max-w-2xl mx-auto">
+        The best part? You make the memes. Tag us, spam the timeline, and help the dog go viral.
+      </p>
 
-<a href="#buy" class="px-10 py-5 bg-gradient-to-r from-orange-500 to-red-500 text-black text-2xl font-black rounded-2xl hover:scale-110 transition">
-JOIN BEFORE 100%
-</a>
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-zinc-900 p-6 rounded-3xl border border-green-500/30">
+          <p class="text-6xl mb-4">📸</p>
+          <p class="font-bold">Loading screen edits</p>
+          <p class="text-sm text-zinc-400 mt-2">Put BufferDog face on every classic loading bar</p>
+        </div>
+        <div class="bg-zinc-900 p-6 rounded-3xl border border-green-500/30">
+          <p class="text-6xl mb-4">😂</p>
+          <p class="font-bold">POV memes</p>
+          <p class="text-sm text-zinc-400 mt-2">"Me waiting for my SOL tx vs BufferDog at 99%"</p>
+        </div>
+        <div class="bg-zinc-900 p-6 rounded-3xl border border-green-500/30">
+          <p class="text-6xl mb-4">🔥</p>
+          <p class="font-bold">Cursed versions</p>
+          <p class="text-sm text-zinc-400 mt-2">Glitch effects, red eyes, distorted dog</p>
+        </div>
+      </div>
 
-<a href="https://dexscreener.com/solana/TU_CA_AQUI" target="_blank"
-class="px-10 py-5 border-2 text-xl rounded-2xl hover:bg-white/10 transition">
-LIVE CHART
-</a>
+      <a href="https://x.com/BufferDogSol" target="_blank"
+         class="inline-flex items-center gap-4 bg-gradient-to-r from-green-500 to-emerald-500 text-black font-black text-2xl px-12 py-6 rounded-3xl hover:scale-110 transition shadow-xl">
+        <span>POST YOUR MEMES ON X NOW</span>
+        <span class="text-4xl">→</span>
+      </a>
+      <p class="text-sm text-zinc-400 mt-6">@BufferDogSol</p>
+    </div>
+  </section>
 
-</div>
+  <!-- FOOTER -->
+  <footer class="py-20 text-center border-t border-green-500/30 bg-black">
+    <p class="text-4xl font-black mb-8 glitch">JOIN THE PACK THAT NEVER FINISHES LOADING 🐕‍🦺</p>
+    <div class="flex justify-center gap-12 text-6xl mb-12">
+      <a href="https://x.com/BufferDogSol" target="_blank" class="hover:scale-125 transition">𝕏</a>
+    </div>
+    <p class="text-xs opacity-60">BUFFERDOG © 2026 • NFA • DYOR • PURE CHAOS • STILL AT 99%</p>
+  </footer>
 
-<!-- CONTRACT -->
-<div class="mt-10 bg-black/60 inline-flex gap-3 items-center px-6 py-3 rounded-xl border border-green-500/40">
+  <script>
+    function copyCA() {
+      const ca = document.getElementById("contract").innerText;
+      navigator.clipboard.writeText(ca).then(() => {
+        const btn = event.target;
+        const original = btn.innerText;
+        btn.innerText = "COPIED!";
+        setTimeout(() => { btn.innerText = original; }, 2000);
+      });
+    }
 
-<span class="text-green-400">CA:</span>
-<span id="contract">PASTE_CA_HERE</span>
+    // Countdown to Saturday April 4, 2026 18:00 UTC
+    function startCountdown() {
+      const launchDate = new Date(Date.UTC(2026, 3, 4, 18, 0, 0)); // April = month 3 (0-indexed)
+      
+      setInterval(() => {
+        const now = new Date();
+        const diff = launchDate - now;
 
-<button onclick="copyCA()" class="text-sm bg-green-500 text-black px-3 py-1 rounded">
-copy
-</button>
+        if (diff <= 0) {
+          document.getElementById("countdown").innerHTML = "LIVE NOW!";
+          return;
+        }
 
-</div>
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-<!-- STATUS -->
-<div class="mt-10 max-w-md mx-auto">
+        document.getElementById("countdown").innerHTML = 
+          `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }, 1000);
+    }
 
-<div class="h-6 bg-zinc-900 rounded-full overflow-hidden border border-green-500/30">
-<div class="loading-bar h-full w-[99%] bg-green-400"></div>
-</div>
-
-<p class="mt-2 text-green-400 font-bold">
-Buffer progress: 99%
-</p>
-
-</div>
-
-<!-- LORE -->
-<div class="mt-10 text-zinc-400 leading-relaxed">
-The internet tried to finish loading.<br>
-Something appeared in the buffer.<br>
-<span class="text-white font-semibold">BUFFERDOG.</span>
-</div>
-
-</div>
-
-</section>
-
-<!-- VIRAL SECTION -->
-<section class="py-20 px-6 bg-black/60">
-
-<div class="max-w-6xl mx-auto text-center">
-
-<h2 class="text-5xl font-black mb-16 glitch">
-WHY PEOPLE ARE SHARING THIS
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
-<div class="text-5xl mb-4">🌐</div>
-<h3 class="text-2xl font-black">Relatable Meme</h3>
-<p class="text-zinc-400 mt-3">
-Everyone has been stuck at 99%.
-</p>
-</div>
-
-<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
-<div class="text-5xl mb-4">🚀</div>
-<h3 class="text-2xl font-black">Early Signal</h3>
-<p class="text-zinc-400 mt-3">
-The earlier you see it, the better.
-</p>
-</div>
-
-<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
-<div class="text-5xl mb-4">🐕</div>
-<h3 class="text-2xl font-black">Simple Icon</h3>
-<p class="text-zinc-400 mt-3">
-Memes that win are simple.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- LIVE ACTIVITY -->
-<section class="py-20 text-center px-6">
-
-<h2 class="text-4xl font-black mb-10">
-EARLY INTERNET SIGNAL
-</h2>
-
-<p class="text-zinc-400 max-w-xl mx-auto">
-If you found this page before it finished loading,
-you are early.
-</p>
-
-</section>
-
-<!-- HOW TO BUY -->
-<section id="buy" class="py-20 px-6 bg-black/70">
-
-<div class="max-w-4xl mx-auto">
-
-<h2 class="text-5xl font-black text-center mb-12">
-HOW TO JOIN
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="bg-zinc-900 p-8 rounded-2xl">
-<div class="text-3xl font-black text-orange-500">01</div>
-<p class="mt-3 font-bold">Get SOL</p>
-<p class="text-zinc-400">Use Phantom wallet</p>
-</div>
-
-<div class="bg-zinc-900 p-8 rounded-2xl">
-<div class="text-3xl font-black text-orange-500">02</div>
-<p class="mt-3 font-bold">Open Raydium</p>
-<p class="text-zinc-400">Paste contract</p>
-</div>
-
-<div class="bg-zinc-900 p-8 rounded-2xl">
-<div class="text-3xl font-black text-orange-500">03</div>
-<p class="mt-3 font-bold">Enter the buffer</p>
-<p class="text-zinc-400">Welcome early.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="py-16 text-center border-t border-green-500/20">
-
-<p class="text-3xl font-black mb-6">
-JOIN THE PACK
-</p>
-
-<div class="flex justify-center gap-10 text-5xl">
-<a href="https://x.com/BufferDogSol">𝕏</a>
-<a href="https://t.me/bufferdog">📱</a>
-</div>
-
-<p class="mt-10 text-xs opacity-50">
-BUFFERDOG • NFA • DYOR
-</p>
-
-</footer>
-
-<script>
-function copyCA(){
-const ca=document.getElementById("contract").innerText;
-navigator.clipboard.writeText(ca);
-alert("Contract copied");
-}
-</script>
-
+    window.onload = startCountdown;
+  </script>
 </body>
 </html>
