@@ -1,181 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BUFFERDOG | Stuck at 99% 🐕‍🦺</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-    body {
-      background: #0a0a0a;
-      color: #fff;
-      font-family: system-ui;
-    }
-    .glitch {
-      animation: glitch 1s linear infinite;
-      text-shadow: 0 0 10px #22ff88, 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff;
-    }
-    @keyframes glitch {
-      0% { transform: translate(0); }
-      20% { transform: translate(-2px, 2px); }
-      40% { transform: translate(-2px, -2px); }
-      60% { transform: translate(2px, 2px); }
-      80% { transform: translate(2px, -2px); }
-      100% { transform: translate(0); }
-    }
-    .loading-bar {
-      animation: buffer 4s linear infinite;
-      box-shadow: 0 0 20px #22ff88;
-    }
-    .hero-img {
-      filter: brightness(1.1) contrast(1.2);
-      animation: glitch-img 2s linear infinite alternate;
-    }
-    @keyframes glitch-img {
-      0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-      20% { clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
-      40% { clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 80%); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BUFFERDOG | Stuck at 99%</title>
+
+<meta name="description" content="BUFFERDOG is stuck at 99%. The internet's most relatable memecoin.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+background:#070707;
+color:white;
+font-family:system-ui;
+}
+
+.glitch{
+animation:glitch 1s linear infinite;
+text-shadow:0 0 12px #22ff88,2px 2px 0 #ff00ff,-2px -2px 0 #00ffff;
+}
+
+@keyframes glitch{
+0%{transform:translate(0)}
+20%{transform:translate(-2px,2px)}
+40%{transform:translate(-2px,-2px)}
+60%{transform:translate(2px,2px)}
+80%{transform:translate(2px,-2px)}
+100%{transform:translate(0)}
+}
+
+.loading-bar{
+box-shadow:0 0 20px #22ff88;
+}
+
+.hero-img{
+animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+</style>
 </head>
+
 <body class="min-h-screen">
 
-  <!-- NAVBAR -->
-  <nav class="border-b border-green-500/30 bg-black/80 backdrop-blur-md fixed w-full z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <img src="logo.png" alt="BufferDog" class="w-10 h-10"> <!-- SUBE TU LOGO AQUÍ -->
-        <span class="font-black text-2xl tracking-tighter glitch">BUFFERDOG</span>
-      </div>
-      <a href="#buy" class="px-6 py-3 bg-orange-500 text-black font-black rounded-2xl hover:scale-110 transition">BUY $BFRD NOW</a>
-    </div>
-  </nav>
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-black/70 backdrop-blur border-b border-green-500/20">
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
 
-  <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(at_center,#22ff8830_0%,transparent_70%)]"></div>
-    
-    <div class="text-center z-10 px-6 max-w-5xl mx-auto">
-      <img src="logo.png" alt="BufferDog" class="mx-auto w-80 md:w-96 hero-img mb-6 drop-shadow-2xl"> <!-- TU LOGO -->
-      
-      <h1 class="text-7xl md:text-8xl font-black tracking-[-4px] glitch mb-2">STUCK AT 99%</h1>
-      <p class="text-5xl md:text-6xl font-bold text-orange-400 mb-8">BUT STILL FUCKING ONLINE 🐕‍🦺🚀</p>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#buy" class="px-12 py-6 bg-gradient-to-r from-orange-500 to-red-500 text-black font-black text-3xl rounded-3xl hover:scale-110 transition shadow-xl">
-          BUY BEFORE HE LOADS 100%
-        </a>
-        <a href="https://dexscreener.com/solana/TU_CA_AQUI" target="_blank" 
-           class="px-12 py-6 border-4 border-white font-black text-3xl rounded-3xl hover:bg-white/10 transition">
-          LIVE ON DEXSCREENER
-        </a>
-      </div>
+<div class="flex items-center gap-3">
+<img src="logo.png" class="w-10">
+<span class="text-2xl font-black glitch">BUFFERDOG</span>
+</div>
 
-      <div class="mt-12 font-mono text-sm bg-black/60 inline-flex items-center gap-3 px-8 py-4 rounded-2xl border border-green-500/50">
-        <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-        CONTRACT: <span class="text-green-400">TU_CA_AQUI</span>
-      </div>
+<div class="flex gap-4">
+<a href="#buy" class="bg-orange-500 px-6 py-2 rounded-xl font-black hover:scale-110 transition">ENTER BUFFER</a>
+</div>
 
-      <!-- BUFFER BAR -->
-      <div class="mt-16 max-w-md mx-auto">
-        <p class="text-xs tracking-widest mb-2 text-green-400 font-bold">BUFFER STATUS</p>
-        <div class="h-6 bg-zinc-900 rounded-full overflow-hidden border border-green-500/50">
-          <div class="loading-bar h-full w-[99%] bg-gradient-to-r from-green-400 to-emerald-400"></div>
-        </div>
-        <p class="text-center text-green-400 font-black text-xl mt-1">99% • NEVER CRASHED</p>
-      </div>
-    </div>
-  </section>
+</div>
+</nav>
 
-  <!-- WHY BUFFERDOG (ESPECULACIÓN MEME) -->
-  <section class="py-20 px-6 bg-black/70">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-5xl font-black mb-12 glitch">WHY THIS DOG WILL MOON</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500 transition">
-          <p class="text-6xl mb-4">⏳</p>
-          <p class="text-2xl font-black">Buffering since 2019</p>
-          <p class="mt-4 text-zinc-400">Longer than most coins have existed. Diamond hands built different.</p>
-        </div>
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/30 hover:border-green-500 transition">
-          <p class="text-6xl mb-4">🔥</p>
-          <p class="text-2xl font-black">Cursed internet energy</p>
-          <p class="mt-4 text-zinc-400">Glitch culture + loading screens = instant viral. Everyone knows this dog.</p>
-        </div>
-        <div class="bg-zinc-900 p-8 rounded-3xl border border-orange-500/30 hover:border-orange-500 transition">
-          <p class="text-6xl mb-4">🐾</p>
-          <p class="text-2xl font-black">0% taxes • LP burned</p>
-          <p class="mt-4 text-zinc-400">No dev wallet drama. Just pure chaotic patience.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center pt-24 text-center px-6">
 
-  <!-- TOKENOMICS -->
-  <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-5xl font-black text-center mb-12">TOKENOMICS • NO BULLSHIT</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="bg-zinc-900/80 p-8 rounded-3xl border border-green-500/30">
-          <p class="text-6xl font-black text-green-400">1,000,000,000</p>
-          <p class="mt-4 font-bold">Total Supply</p>
-        </div>
-        <div class="bg-zinc-900/80 p-8 rounded-3xl border border-green-500/30">
-          <p class="text-6xl font-black text-green-400">0%</p>
-          <p class="mt-4 font-bold">Taxes</p>
-        </div>
-        <div class="bg-zinc-900/80 p-8 rounded-3xl border border-green-500/30">
-          <p class="text-6xl font-black text-green-400">100%</p>
-          <p class="mt-4 font-bold">Liquidity Burned</p>
-        </div>
-        <div class="bg-zinc-900/80 p-8 rounded-3xl border border-orange-500/30">
-          <p class="text-6xl font-black text-orange-400">99%</p>
-          <p class="mt-4 font-bold">Still Loading...</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="max-w-5xl">
 
-  <!-- HOW TO BUY -->
-  <section id="buy" class="py-20 px-6 bg-gradient-to-b from-transparent via-green-900/10 to-transparent">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-5xl font-black mb-12">HOW TO BUY $BFRD (3 clicks)</h2>
-      <div class="space-y-8">
-        <div class="flex gap-8 bg-zinc-900 p-8 rounded-3xl items-start">
-          <div class="text-4xl font-black text-orange-500">01</div>
-          <div class="flex-1 text-left">
-            <p class="font-bold text-2xl">Get SOL in Phantom / Backpack</p>
-            <p class="text-zinc-400">Fastest wallets on Solana.</p>
-          </div>
-        </div>
-        <div class="flex gap-8 bg-zinc-900 p-8 rounded-3xl items-start">
-          <div class="text-4xl font-black text-orange-500">02</div>
-          <div class="flex-1 text-left">
-            <p class="font-bold text-2xl">Go to Raydium → Paste CA</p>
-            <p class="text-zinc-400">Swap SOL for $BFRD</p>
-          </div>
-        </div>
-        <div class="flex gap-8 bg-zinc-900 p-8 rounded-3xl items-start">
-          <div class="text-4xl font-black text-orange-500">03</div>
-          <div class="flex-1 text-left">
-            <p class="font-bold text-2xl">HODL LIKE A DOG</p>
-            <p class="text-zinc-400">Don't sell until he finally loads 100%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<img src="logo.png" class="mx-auto w-80 hero-img mb-8">
 
-  <!-- COMMUNITY -->
-  <footer class="py-20 text-center border-t border-green-500/30 bg-black">
-    <p class="text-4xl font-black mb-8">JOIN THE PACK THAT NEVER FINISHES LOADING 🐕‍🦺</p>
-    <div class="flex justify-center gap-12 text-6xl">
-      <a href="https://x.com/BufferDogSol" target="_blank" class="hover:scale-125 transition">𝕏</a>
-      <a href="https://t.me/bufferdog" target="_blank" class="hover:scale-125 transition">📱</a>
-    </div>
-    <p class="mt-16 text-xs opacity-50">BUFFERDOG © 2026 • NFA • DYOR • PURE MEMES</p>
-  </footer>
+<h1 class="text-7xl md:text-8xl font-black glitch mb-4">
+STUCK AT 99%
+</h1>
+
+<p class="text-3xl text-orange-400 mb-8">
+But still online.
+</p>
+
+<div class="flex flex-wrap gap-4 justify-center">
+
+<a href="#buy" class="px-10 py-5 bg-gradient-to-r from-orange-500 to-red-500 text-black text-2xl font-black rounded-2xl hover:scale-110 transition">
+JOIN BEFORE 100%
+</a>
+
+<a href="https://dexscreener.com/solana/TU_CA_AQUI" target="_blank"
+class="px-10 py-5 border-2 text-xl rounded-2xl hover:bg-white/10 transition">
+LIVE CHART
+</a>
+
+</div>
+
+<!-- CONTRACT -->
+<div class="mt-10 bg-black/60 inline-flex gap-3 items-center px-6 py-3 rounded-xl border border-green-500/40">
+
+<span class="text-green-400">CA:</span>
+<span id="contract">PASTE_CA_HERE</span>
+
+<button onclick="copyCA()" class="text-sm bg-green-500 text-black px-3 py-1 rounded">
+copy
+</button>
+
+</div>
+
+<!-- STATUS -->
+<div class="mt-10 max-w-md mx-auto">
+
+<div class="h-6 bg-zinc-900 rounded-full overflow-hidden border border-green-500/30">
+<div class="loading-bar h-full w-[99%] bg-green-400"></div>
+</div>
+
+<p class="mt-2 text-green-400 font-bold">
+Buffer progress: 99%
+</p>
+
+</div>
+
+<!-- LORE -->
+<div class="mt-10 text-zinc-400 leading-relaxed">
+The internet tried to finish loading.<br>
+Something appeared in the buffer.<br>
+<span class="text-white font-semibold">BUFFERDOG.</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- VIRAL SECTION -->
+<section class="py-20 px-6 bg-black/60">
+
+<div class="max-w-6xl mx-auto text-center">
+
+<h2 class="text-5xl font-black mb-16 glitch">
+WHY PEOPLE ARE SHARING THIS
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
+<div class="text-5xl mb-4">🌐</div>
+<h3 class="text-2xl font-black">Relatable Meme</h3>
+<p class="text-zinc-400 mt-3">
+Everyone has been stuck at 99%.
+</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
+<div class="text-5xl mb-4">🚀</div>
+<h3 class="text-2xl font-black">Early Signal</h3>
+<p class="text-zinc-400 mt-3">
+The earlier you see it, the better.
+</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-3xl border border-green-500/20">
+<div class="text-5xl mb-4">🐕</div>
+<h3 class="text-2xl font-black">Simple Icon</h3>
+<p class="text-zinc-400 mt-3">
+Memes that win are simple.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- LIVE ACTIVITY -->
+<section class="py-20 text-center px-6">
+
+<h2 class="text-4xl font-black mb-10">
+EARLY INTERNET SIGNAL
+</h2>
+
+<p class="text-zinc-400 max-w-xl mx-auto">
+If you found this page before it finished loading,
+you are early.
+</p>
+
+</section>
+
+<!-- HOW TO BUY -->
+<section id="buy" class="py-20 px-6 bg-black/70">
+
+<div class="max-w-4xl mx-auto">
+
+<h2 class="text-5xl font-black text-center mb-12">
+HOW TO JOIN
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-zinc-900 p-8 rounded-2xl">
+<div class="text-3xl font-black text-orange-500">01</div>
+<p class="mt-3 font-bold">Get SOL</p>
+<p class="text-zinc-400">Use Phantom wallet</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-2xl">
+<div class="text-3xl font-black text-orange-500">02</div>
+<p class="mt-3 font-bold">Open Raydium</p>
+<p class="text-zinc-400">Paste contract</p>
+</div>
+
+<div class="bg-zinc-900 p-8 rounded-2xl">
+<div class="text-3xl font-black text-orange-500">03</div>
+<p class="mt-3 font-bold">Enter the buffer</p>
+<p class="text-zinc-400">Welcome early.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 text-center border-t border-green-500/20">
+
+<p class="text-3xl font-black mb-6">
+JOIN THE PACK
+</p>
+
+<div class="flex justify-center gap-10 text-5xl">
+<a href="https://x.com/BufferDogSol">𝕏</a>
+<a href="https://t.me/bufferdog">📱</a>
+</div>
+
+<p class="mt-10 text-xs opacity-50">
+BUFFERDOG • NFA • DYOR
+</p>
+
+</footer>
+
+<script>
+function copyCA(){
+const ca=document.getElementById("contract").innerText;
+navigator.clipboard.writeText(ca);
+alert("Contract copied");
+}
+</script>
 
 </body>
 </html>
